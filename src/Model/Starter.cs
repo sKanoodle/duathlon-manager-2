@@ -8,11 +8,10 @@ namespace DuathlonManager2.Model
 {
     public class Starter
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Club { get; set; }
-        public int YearOfBirth { get; set; }
-        public Sex Sex { get; set; }
+        public int StartNumber { get; set; }
+        public Competition Competition { get; set; }
+        public List<Person> Persons { get; set; }
+        public string TeamName { get; set; }
+        public Result Result { get; set; }
     }
 }
