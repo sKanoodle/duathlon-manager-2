@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Label Content="{DynamicResource ResourceKey=testString}" />
+            <Button Content="" Click="Button_Click" />
+        </StackPanel>
     </Grid>
 </Window>

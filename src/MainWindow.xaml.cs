@@ -23,6 +23,22 @@ namespace DuathlonManager2
         public MainWindow()
         {
             InitializeComponent();
+
+
+            List<int> foo = new List<int>();
+            foo.Insert(0, 3);
+            foo.Insert(1, 2);
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var resources = Application.Current.Resources.MergedDictionaries.ToArray();
+            foreach (var resource in resources.Where(r => r.Source.OriginalString.StartsWith("Localization")))
+                Application.Current.Resources.MergedDictionaries.Remove(resource);
+
+            var dict = (ResourceDictionary)Application.LoadComponent(new Uri("Localization/de_DE.xaml", UriKind.Relative));
+            Application.Current.Resources.MergedDictionaries.Add(dict);
         }
     }
 }
